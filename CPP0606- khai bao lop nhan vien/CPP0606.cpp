@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class NhanVien {
+public:
+    string mnv, ten, gtinh, nsinh, dchi, mthue, ngay;
+
+    friend istream &operator >> (istream &is, NhanVien &a) {
+        a.mnv = "00001";
+        getline(is, a.ten);
+        getline(is, a.gtinh);
+        getline(is, a.nsinh);
+        getline(is, a.dchi);
+        getline(is, a.mthue);
+        getline(is, a.ngay);
+        return is;
+    }
+
+    friend ostream &operator << (ostream &os, NhanVien &a) {
+        os << a.mnv << " " << a.ten << " " << a.gtinh << " " << a.nsinh << " " << a.dchi << " " << a.mthue << " " << a.ngay;
+        return os;
+    }
+};
+
+int main() {
+    NhanVien a;
+    cin >> a;
+    cout << a;
+    return 0;
+}
